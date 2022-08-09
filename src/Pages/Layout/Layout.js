@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { devices } from "../../Utils/Devices/Devices";
 import NavLinks from '../../Components/NavLinks/NavLinks'
 import MobileNavLinks from '../../Components/MobileNavLinks/MobileNavLinks'
+import FooterEl from "../../Components/Footer/Footer";
 
 const Nav = styled.nav`
   border-bottom: 3px solid #00bfff;
@@ -22,13 +23,7 @@ const Nav = styled.nav`
   @media ${devices.mobile} {
     width: 100%;
     height: 10vh;
-    &:hover {
-     opacity: .8;
   }
-  }
-`
-const Li = styled.li`
-  
 `
 const Logo = styled.h1`
   width: 30vw;
@@ -42,29 +37,6 @@ const Lang = styled.h3`
     display: none;
   }
 `
-const Footer = styled.footer`
-  background-color: #000;
-  color: #fff;
-  width: 100vw;
-  
-`
-const Fnav = styled.nav`
-
-`
-const Ful = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100vw;
-  border: 1px solid black;
-`
-const P = styled.p`
-  text-align: center; 
-  padding: 5vh;
-`
 const Hamburger = styled.div`
   display: none;
   @media ${devices.mobile}{
@@ -72,8 +44,6 @@ const Hamburger = styled.div`
     font-size: 40px;
   }
 `
-
-
 const Layout = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
   return (
@@ -87,36 +57,8 @@ const Layout = () => {
         {isNavExpanded ? <MobileNavLinks /> : null}
         <Lang>ENG/PL</Lang>
       </Nav>
-
       <Outlet />
-      <Footer>
-        <Fnav>
-          <Ful>
-            <Li>
-              Kontakt
-              <ul>
-                <li>Mail</li>
-                <li>Telefon</li>
-                <li>Adres?</li>
-              </ul>
-            </Li>
-            <Li>
-              Social 
-              <ul>
-                <li>facebook</li>
-                <li>instagram</li>
-                <li>youtube</li>
-              </ul>
-            </Li>
-            <Li>
-              Links
-            </Li>
-          </Ful>
-        </Fnav>
-        <div>
-          <P>copyrights 2022 <b>Andrzej Laskowski</b></P>
-        </div>
-      </Footer>
+      <FooterEl />
     </>
   )
 };
