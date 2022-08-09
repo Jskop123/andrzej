@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/andrzej/static/css/main.f688633d.css",
+    "main.js": "/andrzej/static/js/main.d372b67e.js",
+    "static/media/DJI_0007.jpg": "/andrzej/static/media/DJI_0007.790ec535d23ea0966247.jpg",
+    "static/media/FOX00650.jpg": "/andrzej/static/media/FOX00650.b594d5cf6431d2be63a3.jpg",
+    "static/media/20210515_151908.jpg": "/andrzej/static/media/20210515_151908.4f654366ebfd811e8ab6.jpg",
+    "index.html": "/andrzej/index.html",
+    "main.f688633d.css.map": "/andrzej/static/css/main.f688633d.css.map",
+    "main.d372b67e.js.map": "/andrzej/static/js/main.d372b67e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f688633d.css",
+    "static/js/main.d372b67e.js"
+  ]
+}
