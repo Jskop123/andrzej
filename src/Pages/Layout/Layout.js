@@ -1,5 +1,9 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { useState } from "react";
 import styled from "styled-components";
+import { devices } from "../../Utils/Devices/Devices";
+import NavLinks from '../../Components/NavLinks/NavLinks'
+import MobileNavLinks from '../../Components/MobileNavLinks/MobileNavLinks'
 
 const Nav = styled.nav`
   border-bottom: 3px solid #00bfff;
@@ -15,6 +19,16 @@ const Nav = styled.nav`
   &:hover {
     opacity: 1;
   }
+  @media ${devices.mobile} {
+    width: 100%;
+    height: 10vh;
+    &:hover {
+     opacity: .8;
+  }
+  }
+`
+const Li = styled.li`
+  
 `
 const Logo = styled.h1`
   width: 30vw;
@@ -24,33 +38,10 @@ const Logo = styled.h1`
 const Lang = styled.h3`
   color: #fff;
   width: 10vw;
-`
-const Ul = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 60vw;
-`
-const Li = styled.li`
-  
-`
-
-const StyledNavLink = styled(NavLink)`
-  text-decoration: none;
-  color: #fff;
-  opactity: .8;
-  font-weight: bold;
-  transition: .3s;
-  &:hover {
-    border-bottom: 3px solid #00bfff;
-    color: #00bfff;
-    opactity: 1;
+  @media ${devices.mobile}{
+    display: none;
   }
 `
-
 const Footer = styled.footer`
   background-color: #000;
   color: #fff;
@@ -74,26 +65,26 @@ const P = styled.p`
   text-align: center; 
   padding: 5vh;
 `
+const Hamburger = styled.div`
+  display: none;
+  @media ${devices.mobile}{
+    display: block;
+    font-size: 40px;
+  }
+`
+
 
 const Layout = () => {
+  const [isNavExpanded, setIsNavExpanded] = useState(false)
   return (
     <>
       <Nav>
         <Logo>Logo</Logo>
-        <Ul>
-          <Li>
-            <StyledNavLink to="/">About</StyledNavLink>
-          </Li>
-          <Li>
-            <StyledNavLink to="/offers">Offers</StyledNavLink>
-          </Li>
-          <Li>
-            <StyledNavLink to="/works">Works</StyledNavLink>
-          </Li>
-          <Li>
-            <StyledNavLink to="/contact">Contact</StyledNavLink>
-          </Li>
-        </Ul>
+        <Hamburger onClick={() => {
+          setIsNavExpanded(!isNavExpanded);
+        }}>&#9776;</Hamburger>
+        <NavLinks />
+        {isNavExpanded ? <MobileNavLinks /> : null}
         <Lang>ENG/PL</Lang>
       </Nav>
 

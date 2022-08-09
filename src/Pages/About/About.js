@@ -76,7 +76,6 @@ const About = () => {
   return <>
     <Header>
       <Img src={backgroundphoto} />
-      <H1>Andrzej Laskowski</H1>
       <Div>
         <AiOutlineArrowDown />
       </Div>
