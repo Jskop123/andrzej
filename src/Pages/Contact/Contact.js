@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { devices } from "../../Utils/Devices/Devices";
+//import { devices } from "../../Utils/Devices/Devices";
 import profilowe from "../../img/profilowe.jpeg";
 
 const Section = styled.section`
