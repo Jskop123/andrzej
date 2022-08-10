@@ -1,8 +1,9 @@
 {
   "name": "andrzej",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://jskop123.github.io/andrzej",
+  "private": false,
+  "homepage": "http://localhost:8888/",
+  
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -39,8 +40,7 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ],
-    "proxy": "http://localhost:3000"
+    ]
   },
   "resolutions": {
     "styled-components": "^5"
