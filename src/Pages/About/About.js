@@ -16,24 +16,6 @@ const Img = styled.img`
   object-fit: cover;
   object-position: 100% 0;
 `
-const H1 = styled.h1`
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%);
-  color: #fff;
-  z-index: 1;
-  font-size: 20px;
-  padding: 15px;
-  opacity: .8;
-  background-color: #000;
-  border-bottom: 3px solid #00bfff;
-  transition: 1s;
-  &:hover {
-    transform: rotate(90deg);
-    opacity: 1;
-  }
-`
 const Div = styled.div`
   border: 3px solid #00bfff;
   width: 80px;
