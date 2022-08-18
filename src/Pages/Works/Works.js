@@ -1,3 +1,5 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import WorksCategorie from "../../Components/WorksCategorie/WorksCategorie";
 import { devices } from "../../Utils/Devices/Devices";
@@ -13,10 +15,17 @@ const Div = styled.div`
 `
 
 const Works = () => {
+  const url = window.location.pathname;
+  const movies = `${url}/movies`
+  const photos = `${url}/photos`
   return (
     <Div>
-      <WorksCategorie img={img1} text="Tu film czyli gif" />
-      <WorksCategorie img={img2} text="Zdjecie" />
+      <NavLink to={movies}>
+        <WorksCategorie img={img1} text="Tu film czyli gif" />
+      </NavLink>
+      <NavLink to={photos}>
+        <WorksCategorie img={img2} text="Zdjecie" />
+      </NavLink>
     </Div>
   );
 };

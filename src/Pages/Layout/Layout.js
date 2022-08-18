@@ -1,3 +1,4 @@
+import React from "react";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import styled from "styled-components";
@@ -6,8 +7,10 @@ import NavLinks from '../../Components/NavLinks/NavLinks'
 import MobileNavLinks from '../../Components/MobileNavLinks/MobileNavLinks'
 import FooterEl from "../../Components/Footer/Footer";
 
+
 const Nav = styled.nav`
-  border-bottom: 3px solid #00bfff;
+  //border-bottom: 3px solid #00bfff;
+  box-shadow: 0px 15px 15px 15px rgba(0, 0, 0, 5);
   position: fixed;
   top: 0;
   display: flex;

@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { AiFillFacebook, AiFillInstagram, AiFillYoutube, AiFillMail, AiFillPhone, AiFillHome} from "react-icons/ai";
 import { devices } from "../../Utils/Devices/Devices";
@@ -85,7 +86,7 @@ const FooterEl = () => {
           <Fli>
             Social 
             <Ul>
-              <Li><Links href="https://www.facebook.com/"><Icon><AiFillFacebook /></Icon>&#160;facebook.com</Links></Li>
+              <Li><Links about="blanc" href="https://www.facebook.com/"><Icon><AiFillFacebook /></Icon>&#160;facebook.com</Links></Li>
               <Li><Links href="https://www.instagram.com/"><Icon><AiFillInstagram /></Icon>&#160;instagram.com</Links></Li>
               <Li><Links href="https://www.youtube.com/"><Icon><AiFillYoutube /></Icon>&#160;youtube.com</Links></Li>
             </Ul>

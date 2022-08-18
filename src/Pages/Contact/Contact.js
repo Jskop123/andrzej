@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 //import { devices } from "../../Utils/Devices/Devices";
 import profilowe from "../../img/profilowe.jpeg";

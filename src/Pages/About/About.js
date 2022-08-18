@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import backgroundphoto from './../../img/DJI_0007.jpg'
@@ -17,7 +18,7 @@ const Img = styled.img`
   object-position: 100% 0;
 `
 const Div = styled.div`
-  border: 3px solid #00bfff;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1);
   width: 80px;
   height: 80px;
   background-color: #000;
